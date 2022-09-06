@@ -1,0 +1,19 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "front end of avaland",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass ./styles/main.scss ./styles/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://igit.partdp.ir/college/developer4/ava-land/404/frontend.git"
+  },
+  "author": "Nafas Ameri",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.54.8"
+  }
+}
