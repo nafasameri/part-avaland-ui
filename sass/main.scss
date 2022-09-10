@@ -1,7 +1,55 @@
 @font-face {
     font-family: 'Peyda';
     font-weight: normal;
-    src: url(../fonts/);
+    src: url(../fonts/peyda-light.ttf);
+}
+
+@font-face {
+    font-family: 'Peyda';
+    font-weight: lighter;
+    src: url(../fonts/peyda-extralight.ttf);
+}
+
+@font-face {
+    font-family: 'Peyda';
+    font-weight: bold;
+    src: url(../fonts/Peyda-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Peyda';
+    font-weight: bolder;
+    src: url(../fonts/Peyda-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: 'Peyda';
+    font-weight: 100;
+    src: url(../fonts/Peyda-Black.ttf);
+}
+
+@font-face {
+    font-family: 'Peyda';
+    font-weight: 400;
+    src: url(../fonts/Peyda-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Peyda';
+    font-weight: 600;
+    src: url(../fonts/Peyda-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Peyda';
+    font-weight: bold;
+    src: url(../fonts/Peyda-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Peyda';
+    font-weight: 100;
+    src: url(../fonts/Peyda-Thin.ttf);
 }
 
 body {
@@ -163,10 +211,10 @@ body {
             flex: none;
             order: 0;
             flex-grow: 0;
+        }
 
-            &:active {
-                color: $primary-color;
-            }
+        .desc_active {
+            color: $primary-color;
         }
 
         &__link {
@@ -208,7 +256,7 @@ body {
             // background-size: cover;
 
             &:active {
-                box-sizing: border-box;
+                // box-sizing: border-box;  
 
                 // position: absolute;
                 // left: 100%;
@@ -216,37 +264,39 @@ body {
                 // top: 100%;
                 // bottom: -100%;
 
-                background: $primary-color;
+                // background: $primary-color;
                 // opacity: 0;
-                border: 1px solid $primary-color;
-                transform: rotate(-180deg);
+                // border: 1px solid $primary-color;
+                // transform: rotate(-180deg);
+                filter: invert(83%) sepia(39%) saturate(4484%) hue-rotate(38deg) brightness(269%) contrast(101%);
             }
         }
 
-        &--active {
-            box-sizing: border-box;
+        .active {
 
-            /* Auto layout */
+            // box-sizing: border-box;
 
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            align-items: center;
-            padding: 0px 16px;
-            gap: 16px;
+            // /* Auto layout */
 
-            width: 181px;
-            height: 32px;
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: flex-end;
+            // align-items: center;
+            // padding: 0px 16px;
+            // gap: 16px;
 
-            border-right: 2px solid #FFA928;
+            // width: 181px;
+            // height: 32px;
+
+            border-right: 2px solid $primary-color;
             border-radius: 1px;
 
             /* Inside auto layout */
 
-            flex: none;
-            order: 5;
-            align-self: stretch;
-            flex-grow: 0;
+            // flex: none;
+            // order: 5;
+            // align-self: stretch;
+            // flex-grow: 0;
         }
 
     }

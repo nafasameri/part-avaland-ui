@@ -1,7 +1,47 @@
 @font-face {
   font-family: "Peyda";
   font-weight: normal;
-  src: url(../fonts/);
+  src: url(../fonts/peyda-light.ttf);
+}
+@font-face {
+  font-family: "Peyda";
+  font-weight: lighter;
+  src: url(../fonts/peyda-extralight.ttf);
+}
+@font-face {
+  font-family: "Peyda";
+  font-weight: bold;
+  src: url(../fonts/Peyda-Bold.ttf);
+}
+@font-face {
+  font-family: "Peyda";
+  font-weight: bolder;
+  src: url(../fonts/Peyda-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "Peyda";
+  font-weight: 100;
+  src: url(../fonts/Peyda-Black.ttf);
+}
+@font-face {
+  font-family: "Peyda";
+  font-weight: 400;
+  src: url(../fonts/Peyda-Medium.ttf);
+}
+@font-face {
+  font-family: "Peyda";
+  font-weight: 600;
+  src: url(../fonts/Peyda-Regular.ttf);
+}
+@font-face {
+  font-family: "Peyda";
+  font-weight: bold;
+  src: url(../fonts/Peyda-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Peyda";
+  font-weight: 100;
+  src: url(../fonts/Peyda-Thin.ttf);
 }
 body {
   position: absolute;
@@ -119,7 +159,7 @@ body .nav__desc {
   order: 0;
   flex-grow: 0;
 }
-body .nav__desc:active {
+body .nav .desc_active {
   color: #FC8F22;
 }
 body .nav__link {
@@ -138,29 +178,12 @@ body .nav__link {
   flex-grow: 0;
 }
 body .nav__icon:active {
-  box-sizing: border-box;
-  background: #FC8F22;
-  border: 1px solid #FC8F22;
-  transform: rotate(-180deg);
+  filter: invert(83%) sepia(39%) saturate(4484%) hue-rotate(38deg) brightness(269%) contrast(101%);
 }
-body .nav--active {
-  box-sizing: border-box;
-  /* Auto layout */
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0px 16px;
-  gap: 16px;
-  width: 181px;
-  height: 32px;
-  border-right: 2px solid #FFA928;
+body .nav .active {
+  border-right: 2px solid #FC8F22;
   border-radius: 1px;
   /* Inside auto layout */
-  flex: none;
-  order: 5;
-  align-self: stretch;
-  flex-grow: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
