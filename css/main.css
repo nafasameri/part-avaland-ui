@@ -44,146 +44,177 @@
   src: url(../fonts/Peyda-Thin.ttf);
 }
 body {
-  position: absolute;
   left: 0%;
   right: 0%;
   top: 0%;
   bottom: 0%;
   background: #010101;
-  box-shadow: -0.670833px 33.5417px 100.625px -3.35417px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
 }
-body .sidebar {
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 32px 0px;
   gap: 64px;
-  position: absolute;
   width: 230px;
   height: 100vh;
   right: 0px;
   top: 0px;
   background: rgba(70, 70, 70, 0.2);
   backdrop-filter: blur(10px);
-  /* Note: backdrop-filter has minimal browser support */
-  border-radius: 0px;
 }
-body .logo {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 12px;
-  width: 89.47px;
-  height: 77.5px;
-  background: #FC8F22;
-  border-radius: 24px;
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-body .logo__elm1 {
-  width: 15.93px;
-  height: 51.13px;
-  background: #FFFFFF;
-  border-radius: 17.6665px;
-  transform: rotate(-19.92deg);
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0px -12px;
-}
-body .logo__elm2 {
-  width: 15.93px;
-  height: 51.13px;
-  background: #FFFFFF;
-  border-radius: 17.6665px;
-  transform: rotate(-19.92deg);
-  /* Inside auto layout */
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  margin: 0px -12px;
-}
-body .logo__elm3 {
-  width: 15.93px;
-  height: 28.5px;
-  background: #FFFFFF;
-  border-radius: 17.6665px;
-  transform: rotate(-19.92deg);
-  /* Inside auto layout */
-  flex: none;
-  order: 2;
-  flex-grow: 0;
-}
-body .nav {
+
+.nav {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   padding: 0px;
   gap: 32px;
-  width: 181px;
-  height: 352px;
-  /* Inside auto layout */
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
-body .nav__item {
+.nav__item {
+  transition: all 0.3s;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   padding: 0px 16px 0px 0px;
   gap: 16px;
-  width: 181px;
   height: 32px;
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
   align-self: stretch;
-  flex-grow: 0;
 }
-body .nav__desc {
-  font-family: "Peyda";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 12px;
-  /* identical to box height, or 75% */
-  color: #999999;
-  text-align: start;
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-body .nav .desc_active {
-  color: #FC8F22;
-}
-body .nav__link {
-  width: 75px;
-  height: 12px;
-  font-family: "Peyda";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 12px;
-  /* identical to box height, or 75% */
-  color: #999999;
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-body .nav__icon:active {
+.nav__item:hover {
+  cursor: pointer;
   filter: invert(83%) sepia(39%) saturate(4484%) hue-rotate(38deg) brightness(269%) contrast(101%);
-}
-body .nav .active {
   border-right: 2px solid #FC8F22;
   border-radius: 1px;
-  /* Inside auto layout */
+}
+.nav__desc {
+  font-family: "Peyda";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #999999;
+}
+.nav .desc_active {
+  color: #FC8F22;
+}
+.nav__icon {
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+}
+.nav .active {
+  border-right: 2px solid #FC8F22;
+  border-radius: 1px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Peyda";
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  width: 100%;
+}
+
+.head {
+  width: 100%;
+  height: 64px;
+  margin-left: 120px;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.head__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.head__right {
+  display: flex;
+  align-items: center;
+}
+.head__searchbox {
+  background-color: rgba(70, 70, 70, 0.3);
+  width: 100%;
+  display: flex;
+  height: 64px;
+  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 16px;
+}
+.head__searchButton {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+.head__searchText {
+  color: white;
+  text-align: right;
+  width: 100%;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-family: "Peyda";
+  border: none;
+  background-color: transparent;
+}
+.head__searchFillter {
+  border-radius: 30px;
+  background-color: rgba(70, 70, 70, 0.3);
+  color: #ffffff;
+  padding: 5px 15px;
+}
+.head__line {
+  width: 2px;
+  height: 24px;
+  background-color: #999999;
+}
+.head__fillterButton {
+  width: 24px;
+  height: 24px;
+}
+.head__searchFillterText {
+  color: #ffffff;
+  margin-left: 20px;
+}
+.head__profile {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  color: #FC8F22;
+  font-family: "Peyda";
+  font-weight: 600;
+  font-size: 16px;
+}
+.head__headArrowDown {
+  margin-right: 10px;
+  margin-top: 8px;
+  width: 16px;
+  height: 8px;
+}
+.head__searchText:focus {
+  border: none;
+}
+
+.content {
+  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

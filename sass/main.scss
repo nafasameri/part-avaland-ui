@@ -52,252 +52,236 @@
     src: url(../fonts/Peyda-Thin.ttf);
 }
 
-body {
-    $primary-color: #FC8F22;
-    $secondry-color: #999999;
-    $background-color: #010101;
+$primary-color: #FC8F22;
+$secondry-color: #999999;
+$background-color: #010101;
 
-    // direction: rtl;
-    position: absolute;
+body {
     left: 0%;
     right: 0%;
     top: 0%;
     bottom: 0%;
-
     background: $background-color;
-    box-shadow: -0.670833px 33.5417px 100.625px -3.35417px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: space-between;
+    // box-shadow: -0.670833px 33.5417px 100.625px -3.35417px rgba(0, 0, 0, 0.15);
+}
 
-    .sidebar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 32px 0px;
-        gap: 64px;
+main {
+    // background-color: aqua;
+    // height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
-        position: absolute;
-        width: 230px;
-        height: 100vh;
-        // left: 1690px;
-        right: 0px;
-        top: 0px;
+//sidebar _____________________________________________________
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 0px;
+    gap: 64px;
+    width: 230px;
+    height: 100vh;
+    right: 0px;
+    top: 0px;
+    background: rgba(70, 70, 70, 0.2);
+    backdrop-filter: blur(10px);
+}
 
-        background: rgba(70, 70, 70, 0.2);
-        backdrop-filter: blur(10px);
-        /* Note: backdrop-filter has minimal browser support */
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
 
-        border-radius: 0px;
-    }
+    &__item {
+        transition: all .3s;
 
-    .logo {
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
-        padding: 12px;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0px 16px 0px 0px;
+        gap: 16px;
+        height: 32px;
+        align-self: stretch;
 
-        width: 89.47px;
-        height: 77.5px;
-
-        background: $primary-color;
-        border-radius: 24px;
-
-        /* Inside auto layout */
-
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-
-        &__elm1 {
-            width: 15.93px;
-            height: 51.13px;
-
-            background: #FFFFFF;
-            border-radius: 17.6665px;
-            transform: rotate(-19.92deg);
-
-            /* Inside auto layout */
-
-            flex: none;
-            order: 0;
-            flex-grow: 0;
-            margin: 0px -12px;
-        }
-
-        &__elm2 {
-            width: 15.93px;
-            height: 51.13px;
-
-            background: #FFFFFF;
-            border-radius: 17.6665px;
-            transform: rotate(-19.92deg);
-
-            /* Inside auto layout */
-
-            flex: none;
-            order: 1;
-            flex-grow: 0;
-            margin: 0px -12px;
-        }
-
-        &__elm3 {
-            width: 15.93px;
-            height: 28.5px;
-
-            background: #FFFFFF;
-            border-radius: 17.6665px;
-            transform: rotate(-19.92deg);
-
-            /* Inside auto layout */
-
-            flex: none;
-            order: 2;
-            flex-grow: 0;
-        }
-
-    }
-
-    .nav {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        padding: 0px;
-        gap: 32px;
-
-        width: 181px;
-        height: 352px;
-
-
-        /* Inside auto layout */
-
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-
-        &__item {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            align-items: center;
-            padding: 0px 16px 0px 0px;
-            gap: 16px;
-
-            width: 181px;
-            height: 32px;
-
-
-            /* Inside auto layout */
-
-            flex: none;
-            order: 0;
-            align-self: stretch;
-            flex-grow: 0;
-        }
-
-        &__desc {
-            // width: 75px;
-            // height: 12px;
-
-            font-family: 'Peyda';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 12px;
-            /* identical to box height, or 75% */
-
-            color: $secondry-color;
-            text-align: start;
-
-            /* Inside auto layout */
-
-            flex: none;
-            order: 0;
-            flex-grow: 0;
-        }
-
-        .desc_active {
-            color: $primary-color;
-        }
-
-        &__link {
-            width: 75px;
-            height: 12px;
-
-            font-family: 'Peyda';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 12px;
-            /* identical to box height, or 75% */
-
-
-            color: $secondry-color;
-
-
-            /* Inside auto layout */
-
-            flex: none;
-            order: 0;
-            flex-grow: 0;
-        }
-
-        &__icon {
-            // width: 30px;
-            // height: 30px;
-            // box-sizing: border-box;
-
-            // position: absolute;
-            // left: 8.29%;
-            // right: 8.29%;
-            // top: 8.34%;
-            // bottom: 8.33%;
-
-            // border: 1px solid $secondry-color;
-
-            // background-image: url('../img/icon/linear/home-2.png');
-            // background-size: cover;
-
-            &:active {
-                // box-sizing: border-box;  
-
-                // position: absolute;
-                // left: 100%;
-                // right: -100%;
-                // top: 100%;
-                // bottom: -100%;
-
-                // background: $primary-color;
-                // opacity: 0;
-                // border: 1px solid $primary-color;
-                // transform: rotate(-180deg);
-                filter: invert(83%) sepia(39%) saturate(4484%) hue-rotate(38deg) brightness(269%) contrast(101%);
-            }
-        }
-
-        .active {
-
-            // box-sizing: border-box;
-
-            // /* Auto layout */
-
-            // display: flex;
-            // flex-direction: row;
-            // justify-content: flex-end;
-            // align-items: center;
-            // padding: 0px 16px;
-            // gap: 16px;
-
-            // width: 181px;
-            // height: 32px;
-
+        &:hover {
+            cursor: pointer;
+            filter: invert(83%) sepia(39%) saturate(4484%) hue-rotate(38deg) brightness(269%) contrast(101%);
             border-right: 2px solid $primary-color;
             border-radius: 1px;
-
-            /* Inside auto layout */
-
-            // flex: none;
-            // order: 5;
-            // align-self: stretch;
-            // flex-grow: 0;
         }
+    }
+
+    &__desc {
+        font-family: 'Peyda';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        color: $secondry-color;
 
     }
+
+    .desc_active {
+        color: $primary-color;
+    }
+
+
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        box-sizing: border-box;
+       
+    }
+
+    .active {
+        border-right: 2px solid $primary-color;
+        border-radius: 1px;
+    }
+
+}
+
+
+
+//header _________________________________________________________________________________________________________
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Peyda';
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: #FC8F22;
+    height: 160px;
+    width: 100%;
+
+}
+
+.head {
+    width: 100%;
+    height: 64px;
+    margin-left: 120px;
+    margin-right: 40px;
+    // background-color: #999999;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__left {
+        // margin-left: 120px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        // justify-content: space-around;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        // width: 80%;
+    }
+
+    &__searchbox {
+        // direction: r;
+        background-color: rgba(70, 70, 70, 0.3);
+        width: 100%;
+        display: flex;
+        height: 64px;
+        justify-content: flex-end;
+        align-items: center;
+        // direction: rdtl;
+        justify-content: space-between;
+        border-radius: 16px;
+    }
+
+
+    &__searchButton {
+        margin-right: 10px;
+        width: 24px;
+        height: 24px;
+
+        // background-color: bisque;
+    }
+
+    &__searchText {
+        color: white;
+        text-align: right;
+        width: 100%;
+        padding: 8px 16px;
+        font-size: 16px;
+        font-family: "Peyda";
+        border: none;
+        background-color: transparent;
+
+    }
+
+    &__searchFillter {
+        border-radius: 30px;
+        background-color: rgba(70, 70, 70, 0.3);
+        color: #ffffff;
+        padding: 5px 15px;
+    }
+
+    &__line {
+        // position: absolute;
+        width: 2px;
+        height: 24px;
+        background-color: $secondry-color;
+    }
+
+    &__fillterButton {
+        width: 24px;
+        height: 24px;
+        // margin-left: px;
+    }
+
+    &__searchFillterText {
+        color: #ffffff;
+        margin-left: 20px;
+        // padding: ;
+    }
+
+    &__profile {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        color: $primary-color;
+        font-family: 'Peyda';
+        font-weight: 600;
+        font-size: 16px;
+
+    }
+
+    &__headArrowDown {
+        margin-right: 10px;
+        margin-top: 8px;
+        width: 16px;
+        height: 8px;
+
+    }
+
+    &__username {}
+
+}
+
+.head__searchText:focus {
+    border: none;
+}
+
+//main content section __________________________________________________________________________________________________
+
+.content{
+    height: 100%;
+    // background-color: #FC8F22;
 }
