@@ -65,6 +65,11 @@ body {
     display: flex;
     justify-content: space-between;
     // box-shadow: -0.670833px 33.5417px 100.625px -3.35417px rgba(0, 0, 0, 0.15);
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Peyda';
+    font-style: normal;
 }
 
 main {
@@ -111,9 +116,9 @@ main {
 
         &:hover {
             cursor: pointer;
-            filter: invert(83%) sepia(39%) saturate(4484%) hue-rotate(38deg) brightness(269%) contrast(101%);
-            border-right: 2px solid $primary-color;
-            border-radius: 1px;
+            // filter: invert(83%) sepia(39%) saturate(4484%) hue-rotate(38deg) brightness(269%) contrast(101%);
+            // border-right: 2px solid $primary-color;
+            // border-radius: 1px;
         }
     }
 
@@ -130,8 +135,6 @@ main {
         color: $primary-color;
     }
 
-
-
     &__icon {
         width: 24px;
         height: 24px;
@@ -143,20 +146,11 @@ main {
         border-right: 2px solid $primary-color;
         border-radius: 1px;
     }
-
 }
 
 
 
 //header _________________________________________________________________________________________________________
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Peyda';
-    font-style: normal;
-}
-
 header {
     display: flex;
     align-items: center;
@@ -204,7 +198,6 @@ header {
         border-radius: 16px;
     }
 
-
     &__searchButton {
         margin-right: 10px;
         width: 24px;
@@ -222,7 +215,6 @@ header {
         font-family: "Peyda";
         border: none;
         background-color: transparent;
-
     }
 
     &__searchFillter {
@@ -259,7 +251,6 @@ header {
         font-family: 'Peyda';
         font-weight: 600;
         font-size: 16px;
-
     }
 
     &__headArrowDown {
@@ -267,11 +258,9 @@ header {
         margin-top: 8px;
         width: 16px;
         height: 8px;
-
     }
 
     &__username {}
-
 }
 
 .head__searchText:focus {
