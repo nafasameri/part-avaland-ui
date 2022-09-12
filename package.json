@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "sass ./sass/main.scss ./css/main.css --watch"
+    "watch-main": "sass ./sass/main.scss ./css/main.css --watch",
+    "watch-playlist": "sass ./sass/playlist.scss ./css/playlist.css --watch"
   },
   "repository": {
     "type": "git",
