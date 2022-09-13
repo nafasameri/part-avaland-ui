@@ -1,5 +1,7 @@
 $primary-color: #FC8F22;
 $secondry-color: #999999;
+$background-color: #010101;
+
 .content {
     color: white;
     height: 100%;
@@ -24,7 +26,6 @@ $secondry-color: #999999;
 
     &__image {
         width: 200px;
-
         border-radius: 30px;
     }
 
@@ -53,11 +54,11 @@ $secondry-color: #999999;
         background: rgba(251, 138, 13, 0.2);
     }
 
-    &__title{
+    &__title {
         font-size: 32px;
     }
 
-    &__detail{
+    &__detail {
         display: flex;
         align-items: center;
         font-size: 16px;
@@ -65,10 +66,114 @@ $secondry-color: #999999;
         gap: 10px;
     }
 
-    &__seperator{
+    &__seperator {
         margin: 0px 10px;
         width: 1px;
         height: 14px;
         background-color: white;
     }
 }
+
+.musicTable {
+    direction: rtl;
+    text-align: right;
+    background-color: $background-color ;
+    color: whitesmoke;
+    // border: 1px solid white;
+    border-collapse: collapse;
+    margin-top: 90px;
+    margin-bottom: 100px;
+
+    th {
+        color: $secondry-color;
+        border-bottom: 1px solid;
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__headerNum {
+        width: 5%;
+    }
+
+    &__headerTitle {
+        width: 25%;
+    }
+
+    &__headerAlbum {
+        width: 25%;
+    }
+
+    &__headerRealiseTime {
+        width: 40%;
+    }
+
+
+    &__row {
+        height: 100px;
+    }
+
+    &__rowNum {
+        // text-align: center;
+    }
+
+    &__musicProfileContainer {
+        // padding-top: ;
+        display: flex;
+        align-items: center;
+    }
+
+    &__pic {
+        border-radius: 16px;
+        height: 64px;
+    }
+
+    &__nameArtist {
+        margin-right: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__name {
+        font-family: 'Peyda';
+        font-size: 16px;
+    }
+
+    &__name--active {
+        color: $primary-color;
+    }
+
+    &__artist {
+        font-size: 12px;
+        color: $secondry-color;
+    }
+
+    &__albumName {
+        color: white;
+    }
+
+
+    &__musicOptionContainer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__musicTime {
+        font-size: 16px;
+    }
+
+    &__musicTime--active {
+        color: $primary-color;
+    }
+
+    &__like {}
+
+    &__otherOption {
+        rotate: 90deg;
+        width: 24px;
+        height: 24px;
+    }d
+}
+
