@@ -43,6 +43,17 @@
   font-weight: 100;
   src: url(../fonts/Peyda-Thin.ttf);
 }
+input,
+textarea,
+p,
+div,
+label,
+ul,
+li,
+button {
+  font-family: "Peyda";
+}
+
 .content {
   direction: rtl;
   margin: 4%;
@@ -59,7 +70,6 @@
   list-style-type: none;
 }
 .breadcrumbs__item {
-  font-family: "Peyda";
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
@@ -78,7 +88,6 @@
   height: 386px;
 }
 .upload__title {
-  font-family: "Peyda";
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -130,9 +139,9 @@
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+  position: relative;
 }
 .upload__status {
-  font-family: "Peyda";
   font-weight: 600;
   font-size: 20px;
   line-height: 26px;
@@ -142,25 +151,34 @@
   letter-spacing: 0.02em;
   color: #FFFFFF;
 }
-.upload__progressbar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
-  gap: 16px;
-  isolation: isolate;
-  width: 50%;
-  height: 20px;
-  border-radius: 50px;
-  background-color: #FC8F22;
+.upload progress {
+  direction: ltr;
+  display: block;
+  border: 0 none;
+  background: #010101;
   color: #FFFFFF;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
+  width: 50%;
+  border-radius: 50px;
+}
+.upload progress::-moz-progress-bar {
+  border-radius: 50px;
+  background: #FC8F22;
+}
+.upload progress::-webkit-progress-bar {
+  background: transparent;
+}
+.upload progress::-webkit-progress-value {
+  border-radius: 50px;
+  background: #FC8F22;
+  color: #FFFFFF;
+}
+.upload__progressbar-value {
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 78px;
 }
 .upload__desc {
   width: 100%;
-  font-family: "Peyda";
   font-weight: 500;
   font-size: 14px;
   line-height: 26px;
@@ -183,7 +201,6 @@
   height: auto;
 }
 .music-info__title {
-  font-family: "Peyda";
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -218,12 +235,17 @@
 .music-info .row {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  padding: 0px;
+  gap: 60px;
+}
+.music-info .col {
+  display: inline-grid;
+  flex-direction: column;
   padding: 0px;
   gap: 30px;
+  width: 31%;
 }
 .music-info__label {
-  font-family: "Peyda";
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
@@ -244,11 +266,11 @@
   order: 0;
   align-self: stretch;
   flex-grow: 1;
-  font-family: "Peyda";
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
   width: auto;
+  border: none;
 }
 .music-info .form-group {
   display: flex;
@@ -256,56 +278,72 @@
   justify-content: center;
   align-items: center;
 }
+.music-info .buttons-action {
+  display: inline-block;
+  text-align: left;
+}
 .music-info .savechange {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   padding: 10px 64px;
-  gap: 10px;
   background: linear-gradient(106.97deg, #FE8A48 -11.29%, #FDA53E 91.8%);
   border-radius: 8px;
-  flex: none;
   order: 1;
-  flex-grow: 0;
-  font-family: "Peyda";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
   color: #FFFFFF;
+  text-align: center;
+  border: none;
+  height: 56px;
 }
 .music-info .cancel {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   padding: 10px 64px;
-  gap: 10px;
   background: rgba(70, 70, 70, 0.3);
   border-radius: 8px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 64px;
-  gap: 10px;
-  background: rgba(70, 70, 70, 0.3);
-  border-radius: 8px;
-  font-family: "Peyda";
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
+  height: 56px;
   color: #FFFFFF;
+  text-align: center;
+  border: none;
+  margin-right: 20px;
 }
-.music-info input[type=file] {
+.music-info #lyric {
+  height: 200px;
+}
+.music-info #poster {
+  display: none;
+}
+.music-info .poster {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 56px;
+  padding: 10px;
+  border: none;
+  color: #FFFFFF;
+  background: rgba(70, 70, 70, 0.5);
+  border-radius: 0px 0px 16px 16px;
+}
+.music-info #loadPoster {
   background-image: url(../img/browse.png);
   background-size: cover;
+  border-radius: 16px;
   width: 100%;
   height: 100%;
+  border: none;
 }
-.music-info .pull-left {
-  float: left;
+.music-info .browse-button {
+  position: relative;
+}
+.music-info #cameraIcon {
+  position: absolute;
+  bottom: 20px;
+  right: 100px;
+  width: 20px;
+  height: 18px;
+  z-index: 999;
 }
 
 /*# sourceMappingURL=uploadmusic.css.map */

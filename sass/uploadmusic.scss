@@ -56,6 +56,17 @@ $primary-color: #FC8F22;
 $secondry-color: #999999;
 $background-color: #010101;
 
+input,
+textarea,
+p,
+div,
+label,
+ul,
+li,
+button {
+    font-family: 'Peyda';
+}
+
 .content {
     direction: rtl;
     margin: 4%;
@@ -73,7 +84,6 @@ $background-color: #010101;
     list-style-type: none;
 
     &__item {
-        font-family: 'Peyda';
         font-weight: 500;
         font-size: 16px;
         line-height: 16px;
@@ -94,7 +104,6 @@ $background-color: #010101;
     height: 386px;
 
     &__title {
-        font-family: 'Peyda';
         font-weight: 700;
         font-size: 20px;
         line-height: 24px;
@@ -150,10 +159,11 @@ $background-color: #010101;
         order: 0;
         align-self: stretch;
         flex-grow: 0;
+
+        position: relative;
     }
 
     &__status {
-        font-family: 'Peyda';
         font-weight: 600;
         font-size: 20px;
         line-height: 26px;
@@ -164,26 +174,40 @@ $background-color: #010101;
         color: #FFFFFF;
     }
 
-    &__progressbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0px;
-        gap: 16px;
-        isolation: isolate;
-        width: 50%;
-        height: 20px;
-        border-radius: 50px;
-        background-color: $primary-color;
+    progress {
+        direction: ltr;
+        display: block;
+        border: 0 none;
+        background: $background-color;
         color: #FFFFFF;
-        flex: none;
-        order: 1;
-        flex-grow: 0;
+        width: 50%;
+        border-radius: 50px;
+    }
+    
+    progress::-moz-progress-bar {
+        border-radius: 50px;
+        background: $primary-color;
+    
+    }
+    
+    progress::-webkit-progress-bar {
+        background: transparent;
+    }
+    
+    progress::-webkit-progress-value {
+        border-radius: 50px;
+        background: $primary-color;
+        color: #FFFFFF;
+    }
+
+    &__progressbar-value {
+        color: #FFFFFF;
+        position: absolute;
+        bottom: 78px;
     }
 
     &__desc {
         width: 100%;
-        font-family: 'Peyda';
         font-weight: 500;
         font-size: 14px;
         line-height: 26px;
@@ -199,7 +223,6 @@ $background-color: #010101;
 }
 
 
-
 .music-info {
     margin-top: 50px;
     display: flex;
@@ -210,7 +233,6 @@ $background-color: #010101;
     height: auto;
 
     &__title {
-        font-family: 'Peyda';
         font-weight: 700;
         font-size: 20px;
         line-height: 24px;
@@ -249,13 +271,19 @@ $background-color: #010101;
     .row {
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
+        padding: 0px;
+        gap: 60px;
+    }
+
+    .col {
+        display: inline-grid;
+        flex-direction: column;
         padding: 0px;
         gap: 30px;
+        width: 31%;
     }
 
     &__label {
-        font-family: 'Peyda';
         font-weight: 600;
         font-size: 14px;
         line-height: 24px;
@@ -287,83 +315,102 @@ $background-color: #010101;
         align-self: stretch;
         flex-grow: 1;
 
-        font-family: 'Peyda';
         font-weight: 600;
         font-size: 14px;
         line-height: 24px;
         width: auto;
-
-        // : 10px;
+        border: none;
     }
 
     .form-group {
-         display: flex;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .savechange {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 64px;
-        gap: 10px;
+    .buttons-action {
+        display: inline-block;
+        text-align: left;
+    }
 
+    .savechange {
+        padding: 10px 64px;
         background: linear-gradient(106.97deg, #FE8A48 -11.29%, #FDA53E 91.8%);
         border-radius: 8px;
-
-        flex: none;
         order: 1;
-        flex-grow: 0;
-
-        font-family: 'Peyda';
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
         line-height: 22px;
-
         color: #FFFFFF;
+        text-align: center;
+        border: none;
+        height: 56px;
     }
 
     .cancel {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
         padding: 10px 64px;
-        gap: 10px;
-
         background: rgba(70, 70, 70, 0.3);
         border-radius: 8px;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 64px;
-        gap: 10px;
-
-        background: rgba(70, 70, 70, 0.3);
-        border-radius: 8px;
-
-        font-family: 'Peyda';
         font-weight: 700;
         font-size: 16px;
         line-height: 22px;
-
+        height: 56px;
         color: #FFFFFF;
+        text-align: center;
+        border: none;
+        margin-right: 20px;
     }
 
-    input[type="file"] {
+    // input[type="file"] {
+    //     background-image: url(../img/browse.png);
+    //     background-size: cover;
+    //     width: 100%;
+    //     height: 100%;
+    //     border: none;
+    // }
+
+    #lyric {
+        height: 200px;
+    }
+
+    #poster {
+        // visibility: hidden;
+        display: none;
+    }
+
+    .poster {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 56px;
+        padding: 10px;
+        border: none;
+        color: #FFFFFF;
+        background: rgba(70, 70, 70, 0.5);
+        border-radius: 0px 0px 16px 16px;
+    }
+
+    #loadPoster {
         background-image: url(../img/browse.png);
         background-size: cover;
+        border-radius: 16px;
         width: 100%;
         height: 100%;
+        border: none;
     }
 
-    .pull-left {
-        float: left;
+    .browse-button {
+        position: relative;    
+    }
+
+    #cameraIcon {
+        position: absolute;
+        bottom: 20px;
+        right: 100px;
+        width: 20px;
+        height: 18px;
+        z-index: 999;
     }
 }
