@@ -66,7 +66,6 @@ main {
   padding: 32px 0px;
   gap: 64px;
   width: 230px;
-  /* height: 100vh; */
   right: 0px;
   top: 0px;
   background: rgba(70, 70, 70, 0.2);
@@ -101,17 +100,21 @@ main {
   font-size: 16px;
   color: #999999;
 }
-.nav .desc_active {
-  color: #FC8F22;
-}
 .nav__icon {
   width: 24px;
   height: 24px;
   box-sizing: border-box;
 }
-.nav .active {
+.nav .active, .nav__item:hover {
   border-right: 2px solid #FC8F22;
   border-radius: 1px;
+}
+.nav .active, .nav__item:hover, .nav__desc:hover, .nav__icon:hover, .nav__item:focus, .nav__desc:focus, .nav__icon:focus {
+  filter: brightness(0) saturate(100%) invert(57%) sepia(96%) saturate(956%) hue-rotate(344deg) brightness(101%) contrast(98%);
+}
+.nav .active path, .nav__item:hover path, .nav__desc:hover path, .nav__icon:hover path, .nav__item:focus path, .nav__desc:focus path, .nav__icon:focus path {
+  stroke: #FC8F22 !important;
+  fill: #FC8F22 !important;
 }
 
 header {
@@ -199,6 +202,7 @@ header {
   width: 16px;
   height: 8px;
 }
+
 .head__searchText:focus {
   border: none;
 }

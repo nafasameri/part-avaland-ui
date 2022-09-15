@@ -56,7 +56,8 @@ button {
 
 .content {
   direction: rtl;
-  margin: 4%;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 
 .breadcrumbs {

@@ -13,11 +13,9 @@ $background-color: #010101;
 }
 
 .poster {
-
     background-image: url(../img/poster-background.jpg);
     background-size: cover;
     border-radius: 30px;
-    // background-color: orange;
     width: 100%;
     height: 320px;
     display: flex;
@@ -72,12 +70,18 @@ $background-color: #010101;
         height: 14px;
         background-color: white;
     }
+
+    &__btn-play {
+        width: 68px;
+        height: 68px;
+        margin-top: 15px;
+    }
 }
 
 .musicTable {
     direction: rtl;
     text-align: right;
-    background-color: $background-color ;
+    background-color: $background-color;
     color: whitesmoke;
     // border: 1px solid white;
     border-collapse: collapse;
@@ -107,19 +111,14 @@ $background-color: #010101;
         width: 40%;
     }
 
-
     &__row {
         height: 100px;
     }
 
-    &__rowNum {
-        // text-align: center;
-    }
-
     &__musicProfileContainer {
-        // padding-top: ;
         display: flex;
         align-items: center;
+        position: relative;
     }
 
     &__pic {
@@ -152,7 +151,6 @@ $background-color: #010101;
         color: white;
     }
 
-
     &__musicOptionContainer {
         display: flex;
         justify-content: flex-end;
@@ -168,11 +166,17 @@ $background-color: #010101;
         color: $primary-color;
     }
 
-    &__like {}
-
     &__otherOption {
         rotate: 90deg;
         width: 24px;
         height: 24px;
+    }
+
+    .pause {
+        position: absolute;
+        right: 16px;
+        background-color: $primary-color;
+        padding: 5px;
+        border-radius: 50%;
     }
 }

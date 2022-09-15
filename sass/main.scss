@@ -57,15 +57,9 @@ $secondry-color: #999999;
 $background-color: #010101;
 
 body {
-    // left: 0%;
-    // right: 0%;
-    // top: 0%;
-    // bottom: 0%;
     background: $background-color;
     display: flex;
     justify-content: space-between;
-    // box-shadow: -0.670833px 33.5417px 100.625px -3.35417px rgba(0, 0, 0, 0.15);
-
     margin: 0;
     padding: 0;
     font-family: 'Peyda';
@@ -73,8 +67,6 @@ body {
 }
 
 main {
-    // background-color: aqua;
-    // height: 100px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -88,7 +80,7 @@ main {
     padding: 32px 0px;
     gap: 64px;
     width: 230px;
-    height: 100vh;
+    // height: 100vh;
     right: 0px;
     top: 0px;
     background: rgba(70, 70, 70, 0.2);
@@ -128,26 +120,41 @@ main {
         font-weight: 600;
         font-size: 16px;
         color: $secondry-color;
-
     }
 
-    .desc_active {
-        color: $primary-color;
-    }
+    // .desc_active {
+    // color: $primary-color;
+    // }
 
     &__icon {
         width: 24px;
         height: 24px;
         box-sizing: border-box;
-       
+
     }
 
-    .active {
+    .active, &__item:hover {
         border-right: 2px solid $primary-color;
         border-radius: 1px;
     }
-}
 
+    .active,
+    &__item:hover,
+    &__desc:hover,
+    &__icon:hover,
+    &__item:focus,
+    &__desc:focus,
+    &__icon:focus {
+        filter: brightness(0) saturate(100%) invert(57%) sepia(96%) saturate(956%) hue-rotate(344deg) brightness(101%) contrast(98%);
+
+        // filter: invert(60%) sepia(53%) saturate(1407%) hue-rotate(344deg) brightness(101%) contrast(98%);
+        & path {
+            stroke: $primary-color !important;
+            fill: $primary-color !important;
+        }
+    }
+
+}
 
 
 //header _________________________________________________________________________________________________________
@@ -155,7 +162,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    // background-color: #FC8F22;
     height: 160px;
     width: 100%;
 }
@@ -165,35 +171,29 @@ header {
     height: 64px;
     margin-left: 120px;
     margin-right: 40px;
-    // background-color: #999999;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     &__left {
-        // margin-left: 120px;
         display: flex;
         align-items: center;
         gap: 10px;
-        // justify-content: space-around;
     }
 
     &__right {
         display: flex;
         align-items: center;
-        // width: 80%;
     }
 
     &__searchbox {
-        // direction: r;
         background-color: rgba(70, 70, 70, 0.3);
         width: 100%;
         display: flex;
         height: 64px;
         justify-content: flex-end;
         align-items: center;
-        // direction: rdtl;
         justify-content: space-between;
         border-radius: 16px;
     }
@@ -202,8 +202,6 @@ header {
         margin-right: 10px;
         width: 24px;
         height: 24px;
-
-        // background-color: bisque;
     }
 
     &__searchText {
@@ -225,7 +223,6 @@ header {
     }
 
     &__line {
-        // position: absolute;
         width: 2px;
         height: 24px;
         background-color: $secondry-color;
@@ -234,13 +231,11 @@ header {
     &__fillterButton {
         width: 24px;
         height: 24px;
-        // margin-left: px;
     }
 
     &__searchFillterText {
         color: #ffffff;
         margin-left: 20px;
-        // padding: ;
     }
 
     &__profile {
@@ -259,12 +254,8 @@ header {
         width: 16px;
         height: 8px;
     }
-
-    &__username {}
 }
 
 .head__searchText:focus {
     border: none;
 }
-
-//main content section __________________________________________________________________________________________________
