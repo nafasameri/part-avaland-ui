@@ -1,17 +1,137 @@
-/* Error: expected "{".
- *     ,
- * 177 |     }d
- *     |       ^
- *     '
- *   sass\playlist.scss 177:7  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a     \2577 \a 177 \2502      }d\d\a     \2502        ^\a     \2575 \a   sass\\playlist.scss 177:7  root stylesheet';
+.content {
+  color: white;
+  height: 100%;
+  margin-left: 120px;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
 }
+
+.poster {
+  background-image: url(../img/poster-background.jpg);
+  background-size: cover;
+  border-radius: 30px;
+  width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.poster__image {
+  width: 200px;
+  border-radius: 30px;
+}
+.poster__desc {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  direction: rtl;
+}
+.poster__tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border-radius: 50px;
+  color: #FC8F22;
+  padding: 6px 20px;
+  width: 115px;
+  height: 35px;
+  background: rgba(251, 138, 13, 0.2);
+}
+.poster__title {
+  font-size: 32px;
+}
+.poster__detail {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #999999;
+  gap: 10px;
+}
+.poster__seperator {
+  margin: 0px 10px;
+  width: 1px;
+  height: 14px;
+  background-color: white;
+}
+
+.musicTable {
+  direction: rtl;
+  text-align: right;
+  background-color: #010101;
+  color: whitesmoke;
+  border-collapse: collapse;
+  margin-top: 90px;
+  margin-bottom: 100px;
+}
+.musicTable th {
+  color: #999999;
+  border-bottom: 1px solid;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.musicTable__headerNum {
+  width: 5%;
+}
+.musicTable__headerTitle {
+  width: 25%;
+}
+.musicTable__headerAlbum {
+  width: 25%;
+}
+.musicTable__headerRealiseTime {
+  width: 40%;
+}
+.musicTable__row {
+  height: 100px;
+}
+.musicTable__musicProfileContainer {
+  display: flex;
+  align-items: center;
+}
+.musicTable__pic {
+  border-radius: 16px;
+  height: 64px;
+}
+.musicTable__nameArtist {
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.musicTable__name {
+  font-family: "Peyda";
+  font-size: 16px;
+}
+.musicTable__name--active {
+  color: #FC8F22;
+}
+.musicTable__artist {
+  font-size: 12px;
+  color: #999999;
+}
+.musicTable__albumName {
+  color: white;
+}
+.musicTable__musicOptionContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+}
+.musicTable__musicTime {
+  font-size: 16px;
+}
+.musicTable__musicTime--active {
+  color: #FC8F22;
+}
+.musicTable__otherOption {
+  rotate: 90deg;
+  width: 24px;
+  height: 24px;
+}
+
+/*# sourceMappingURL=playlist.css.map */
