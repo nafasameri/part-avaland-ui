@@ -44,10 +44,6 @@
   src: url(../fonts/Peyda-Thin.ttf);
 }
 body {
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
   background: #010101;
   display: flex;
   justify-content: space-between;
@@ -205,10 +201,6 @@ header {
 }
 .head__searchText:focus {
   border: none;
-}
-
-.content {
-  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
