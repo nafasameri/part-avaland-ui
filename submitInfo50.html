@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AvaLand</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/uploadmusic.css">
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <div class="head">
+
+                <div class="head__profile">
+                    <img src="img/icon/linear/setting-4.png" class="head__headArrowDown"></img>
+                    <div class="head__username">۰۹۱۵۴۰۶۴۹۸۷</div>
+                </div>
+
+                <div class="head__searchbox">
+                    <div class="head__left"> <span class="head__searchFillterText">فیلتر</span>
+                        <img src="img/icon/linear/setting-4.svg" class="head__fillterButton"></img>
+
+                        <div class="head__line"></div>
+                        <div class="head__searchFillter">ایرانی</div>
+                        <div class="head__searchFillter">سنتی</div>
+                        <div class="head__searchFillter">آواز</div>
+                        <div class="head__searchFillter">شاد</div>
+                    </div>
+
+                    <div class="head__right"> <input type="text" class="head__searchText" placeholder="جستجو">
+                        <img src="img/icon/linear/search-normal.svg" class="head__searchButton"></img>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="content">
+            <div class="uploader">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item">بارگزاری آهنگ</li>
+                    <img src="img/icon/linear/arrow-left.png"></img>
+                    <li class="breadcrumbs__item">ذخیره اطلاعات</li>
+                </ul>
+
+                <div class="upload">
+                    <div class="upload__title">بارگزاری آهنگ</div>
+                    <div class="upload__content">
+                        <div class="upload__box">
+                            <div class="upload__status">در حال بارگذاری فایل</div>
+                            <progress class="upload__progressbar" value="50" max="100"></progress>
+                            <div class="upload__progressbar-value"> ۵۰% </div>
+                        </div>
+                        <div class="upload__desc">
+                            <img src="img/icon/bold/info-circle.png" alt="" class="info">
+                            <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                گرافیک است</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="music-info">
+                <div class="music-info__title">اطلاعات آهنگ</div>
+                <div class="music-info__content">
+                    <form action="" class="music-info__form">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="name" class="music-info__label">نام آهنگ</label>
+                                    <input type="text" id="name" name="name" class="music-info__input" value="اشارات">
+                                </div>
+                                <div class="form-group">
+                                    <label for="artist" class="music-info__label">نام خواننده</label>
+                                    <input type="text" id="artist" name="artist" class="music-info__input"
+                                        value="محمدرضا شجریان و همایون شجریان">
+                                </div>
+
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="album" class="music-info__label">نام آلبوم</label>
+                                    <input type="text" id="album" name="album" class="music-info__input" value="اشارات">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="duration" class="music-info__label">مدت زمان آهنگ</label>
+                                    <input type="text" id="duration" name="duration" class="music-info__input"
+                                        value="۰۹:۰۰">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="form-group browse-button">
+                                    <img src="./img/browse.png" alt="" id="loadPoster">
+                                    <img src="./img/icon/linear/Camera.png" alt="" id="cameraIcon">
+                                    <button class="poster" onclick="document.getElementById('poster').click()">بارگذاری
+                                        عکس</button>
+                                    <input type="file" id="poster" name="poster" class="music-info__input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lyric" class="music-info__label">متن آهنگ</label>
+                            <textarea type="text" id="lyric" name="lyric"
+                                class="music-info__input">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</textarea>
+                        </div>
+
+                        <div class="buttons-action">
+                            <input type="button" class="btn-active" value="ذخیره تغییرات">
+                            <input type="button" class="btn-disable" value="لغو">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <aside class="sidebar">
+        <img src="img/logo.png" alt="">
+
+        <div class="nav">
+            <div class="nav__item">
+                <p class="nav__desc">صفحه اصلی</p>
+                <img src="img/icon/linear/home-2.svg" alt="" class="nav__icon">
+            </div>
+
+            <div class="nav__item">
+                <p class="nav__desc">جستجو</p>
+                <img src="img/icon/linear/discover.svg" alt="" class="nav__icon">
+            </div>
+
+            <div class="nav__item">
+                <p class="nav__desc">پخش آهنگ</p>
+                <img src="img/icon/linear/play.svg" alt="" class="nav__icon">
+            </div>
+
+            <div class="nav__item">
+                <p class="nav__desc">محبوب ترین ها</p>
+                <img src="img/icon/linear/heart.svg" alt="" class="nav__icon">
+            </div>
+
+            <div class="nav__item">
+                <p class="nav__desc">لیست پخش منتخب</p>
+                <img src="img/icon/linear/receipt-square.svg" alt="" class="nav__icon">
+            </div>
+
+            <div class="nav__item active">
+                <p class="nav__desc desc_active">آپلود آهنگ</p>
+                <img src="img/icon/bold/import.svg" alt="" class="nav__icon">
+            </div>
+
+        </div>
+    </aside>
+</body>
+
+</html>

@@ -150,7 +150,7 @@ button {
         justify-content: center;
         align-items: center;
         padding: 0px;
-        gap: 32px;
+        gap: 20px;
         width: 100%;
         height: 240px;
         border: 2px dashed rgba(255, 255, 255, 0.25);
@@ -203,7 +203,7 @@ button {
     &__progressbar-value {
         color: #FFFFFF;
         position: absolute;
-        bottom: 78px;
+        bottom: 83px;
     }
 
     &__desc {
@@ -219,6 +219,14 @@ button {
 
     .info {
         padding: 5px;
+    }
+
+    #btn-upload {
+        display: none;
+    }
+
+    .btn-active {
+        padding: 10px 100px !important;
     }
 }
 
@@ -266,21 +274,6 @@ button {
         flex-direction: column;
         padding: 0px;
         gap: 30px;
-    }
-
-    .row {
-        display: flex;
-        flex-direction: row;
-        padding: 0px;
-        gap: 60px;
-    }
-
-    .col {
-        display: inline-grid;
-        flex-direction: column;
-        padding: 0px;
-        gap: 30px;
-        width: 31%;
     }
 
     &__label {
@@ -334,35 +327,6 @@ button {
         text-align: left;
     }
 
-    .savechange {
-        padding: 10px 64px;
-        background: linear-gradient(106.97deg, #FE8A48 -11.29%, #FDA53E 91.8%);
-        border-radius: 8px;
-        order: 1;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 22px;
-        color: #FFFFFF;
-        text-align: center;
-        border: none;
-        height: 56px;
-    }
-
-    .cancel {
-        padding: 10px 64px;
-        background: rgba(70, 70, 70, 0.3);
-        border-radius: 8px;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 22px;
-        height: 56px;
-        color: #FFFFFF;
-        text-align: center;
-        border: none;
-        margin-right: 20px;
-    }
-
     // input[type="file"] {
     //     background-image: url(../img/browse.png);
     //     background-size: cover;
@@ -376,7 +340,6 @@ button {
     }
 
     #poster {
-        // visibility: hidden;
         display: none;
     }
 
@@ -413,4 +376,48 @@ button {
         height: 18px;
         z-index: 999;
     }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    gap: 60px;
+}
+
+.col {
+    display: inline-grid;
+    flex-direction: column;
+    padding: 0px;
+    gap: 30px;
+    width: 31%;
+}
+
+.btn-active {
+    padding: 10px 64px;
+    background: linear-gradient(106.97deg, #FE8A48 -11.29%, #FDA53E 91.8%);
+    border-radius: 8px;
+    order: 1;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    text-align: center;
+    border: none;
+    height: 56px;
+}
+
+.btn-disable {
+    padding: 10px 64px;
+    background: rgba(70, 70, 70, 0.3);
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    height: 56px;
+    color: #FFFFFF;
+    text-align: center;
+    border: none;
+    margin-right: 20px;
 }
