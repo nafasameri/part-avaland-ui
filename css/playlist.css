@@ -81,6 +81,8 @@
 .musicTable__headerNum {
   width: 5%;
 }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .musicTable__headerTitle {
   width: 25%;
 }
@@ -89,9 +91,29 @@
 }
 .musicTable__headerRealiseTime {
   width: 40%;
+=======
+.music-list__title {
+  width: 30%;
+}
+.music-list__album {
+  width: 30%;
+}
+.music-list__release-time {
+  width: 30%;
+>>>>>>> Stashed changes
 }
 .musicTable__row {
   height: 100px;
+=======
+.music-list__title {
+  width: 30%;
+}
+.music-list__album {
+  width: 30%;
+}
+.music-list__release-time {
+  width: 30%;
+>>>>>>> Stashed changes
 }
 .musicTable__musicProfileContainer {
   display: flex;

@@ -99,6 +99,8 @@ $background-color: #010101;
         width: 5%;
     }
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     &__headerTitle {
         width: 25%;
     }
@@ -109,6 +111,29 @@ $background-color: #010101;
 
     &__headerRealiseTime {
         width: 40%;
+=======
+    &__title {
+        width: 30%;
+    }
+
+    &__album {
+=======
+    &__title {
+        width: 30%;
+    }
+
+    &__album {
+        width: 30%;
+    }
+
+    &__release-time {
+>>>>>>> Stashed changes
+        width: 30%;
+    }
+
+    &__release-time {
+        width: 30%;
+>>>>>>> Stashed changes
     }
 
     &__row {

@@ -1,0 +1,261 @@
+@font-face {
+    font-family: 'Peyda';
+    font-weight: normal;
+    src: url(../fonts/peyda-light.ttf);
+}
+
+@font-face {
+    font-family: 'Peyda';
+    font-weight: lighter;
+    src: url(../fonts/peyda-extralight.ttf);
+}
+
+@font-face {
+    font-family: 'Peyda';
+    font-weight: bold;
+    src: url(../fonts/Peyda-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Peyda';
+    font-weight: bolder;
+    src: url(../fonts/Peyda-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: 'Peyda';
+    font-weight: 100;
+    src: url(../fonts/Peyda-Black.ttf);
+}
+
+@font-face {
+    font-family: 'Peyda';
+    font-weight: 400;
+    src: url(../fonts/Peyda-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Peyda';
+    font-weight: 600;
+    src: url(../fonts/Peyda-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Peyda';
+    font-weight: bold;
+    src: url(../fonts/Peyda-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Peyda';
+    font-weight: 100;
+    src: url(../fonts/Peyda-Thin.ttf);
+}
+
+$primary-color: #FC8F22;
+$secondry-color: #999999;
+$background-color: #010101;
+
+input,
+textarea,
+p,
+div,
+label,
+ul,
+li,
+button {
+    font-family: 'Peyda';
+}
+
+
+.poster {
+    background-image: url(../img/Rectangle\ 13.png);
+    background-size: cover;
+    border-radius: 30px;
+    width: 100%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+
+    &__image {
+        width: 264px;
+        height: 250px;
+        border-radius: 30px;
+    }
+
+    &__desc {
+        height: 100%;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    &__lyrics {
+        width: 464px;
+        height: 175px;
+
+        font-weight: 100;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: right;
+        color: rgba(255, 255, 255, 0.6);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        direction: rtl;
+
+        &__more {
+            color: $primary-color;
+        }
+    }
+
+    &__arrow-down {
+        width: 8.55px;
+        height: 5.03px;
+        padding-right: 10px;
+    }
+
+    &__title {
+        font-size: 32px;
+        color: white;
+        margin: 0px;
+        font-size: 32px;
+        line-height: 45px;
+    }
+
+    &__detail {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        color: $secondry-color;
+        gap: 10px;
+    }
+
+    &__seperator {
+        color: white;
+    }
+
+    figure {
+        position: relative;
+    }
+
+    &__btn-play {
+        width: 68px;
+        height: 68px;
+        position: absolute;
+        right: -20px;
+        bottom: -20px;
+    }
+
+    &__share-btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+
+        img {
+            width: 36px;
+            height: 36px;
+        }
+    }
+}
+
+.more-icon {
+    rotate: 90deg;
+}
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+
+        display: flex;
+        align-items: center;
+        text-align: right;
+
+        color: #FFFFFF;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 24px;
+        gap: 28px;
+        width: 100%;
+        height: 288px;
+        border-radius: 24px;
+        order: 1;
+        position: relative;
+        // overflow: scroll;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0px;
+        gap: 32px;
+        width: 100%;
+        height: 240px;
+        order: 0;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0px;
+        gap: 12px;
+    }
+
+    &__img {
+        width: 196.4px;
+        height: 204px;
+        border-radius: 16px;
+    }
+
+    &__music-name {
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        text-align: right;
+        color: rgba(255, 255, 255, 0.8);
+        margin: 0px;
+    }
+
+    &__music-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0px;
+        order: 1;
+        align-self: stretch;
+    }
+
+        &__arrow-right {
+            position: absolute;
+            right: 0px;
+            margin-left: 10px;
+        }
+
+        &__arrow-left {
+            position: absolute;
+            left: 0px;
+            margin-right: 10px;
+        }
+}

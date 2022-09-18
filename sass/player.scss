@@ -5,14 +5,23 @@ $background-color: #010101;
 .player {
     background-color: rgba(41, 41, 41, 0.8);
     height: 90px;
-    width: 100%;
+    width: 90%;
     position: fixed;
     bottom: 0px;
 
     display: flex;
     align-items: center;
+<<<<<<< Updated upstream
     justify-content: space-around;
     
+=======
+    // flex-direction: row-reverse;
+    padding-left: 5%;
+    padding-right: 5%;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
     &__controler {
         width: 100%;

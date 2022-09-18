@@ -8,7 +8,8 @@
     "watch-uploader": "sass ./sass/uploadmusic.scss ./css/uploadmusic.css --watch",
     "watch-main": "sass ./sass/main.scss ./css/main.css --watch",
     "watch-playlist": "sass ./sass/playlist.scss ./css/playlist.css --watch",
-    "watch-player": "sass ./sass/player.scss ./css/player.css --watch"
+    "watch-player": "sass ./sass/player.scss ./css/player.css --watch",
+    "watch-musicdetails": "sass ./sass/music-details.scss ./css/music-details.css --watch"
   },
   "repository": {
     "type": "git",
